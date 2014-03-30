@@ -1,0 +1,645 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+
+   html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, figcaption, figure, 
+   footer, header, hgroup, menu, nav, section, summary,
+   time, mark, audio, video {
+   	margin: 0;
+   	padding: 0;
+   	border: 0;
+   	outline: 0;
+   	font-size: 100%;
+   	font: inherit;
+   	vertical-align: baseline;
+   }
+
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure, 
+   footer, header, hgroup, menu, nav, section {
+   	display: block;
+   }
+   body {
+   	line-height: 20px;
+   	font-family: Verdana, Arial, serif;
+   	font-size: 18px;
+   	color: #3c3c3c;
+   	background-color: #FEFEFE;
+   }
+   ol, ul {
+   	list-style: none;
+   }
+   blockquote, q {
+   	quotes: none;
+   }
+   blockquote:before, blockquote:after,
+   q:before, q:after {
+   	content: '';
+   	content: none;
+   }
+
+
+   input:focus {
+   	border: 1px solid black;
+   }
+
+   /* remember to highlight inserts somehow! */
+   ins {
+   	text-decoration: none;
+   }
+   del {
+   	text-decoration: line-through;
+   }
+
+   table {
+   	border-collapse: collapse;
+   	border-spacing: 0;
+   }
+   /*fin reset*/
+
+   #page-title{
+      display: block;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 20px;
+      margin-top: 40px;
+   }
+
+   #page-title:after{
+      content: '';
+      display: block;
+      width: 50%;
+      border-bottom: 2px solid #86E2D5;
+   }
+
+   .bloc-paragraphe{
+      margin: 20px 0px;
+   }
+
+   .bloc-level{
+      display: block;
+      text-align: right;
+      height: 30px;
+   }
+
+   .bloc-level-active{
+      border-bottom: transparent 5px solid;
+      border-right: transparent 5px solid;
+   }
+
+   .bloc-level > div{
+      margin-left: 5px;
+   }
+
+   .bloc-wiki{
+      width: 20px;
+      display: inline-block;
+      cursor: pointer;
+      height: 20px;
+      background-color: black;
+   }
+
+   .bloc-expert{
+      width: 20px;
+      display: inline-block;
+      cursor: pointer;
+      height: 20px;
+      background-color: #fd6260;
+   }
+
+   .bloc-debutant{
+      width: 20px;
+      display: inline-block;
+      cursor: pointer;
+      height: 20px;
+      background-color: #2ECC71;
+   }
+
+   .bloc-intermediaire{
+      width: 20px;
+      display: inline-block;
+      cursor: pointer;
+      height: 20px;
+      background-color: #EAD05B;
+   }
+
+
+
+   .bloc-title{
+      height: 40px;
+      line-height: 40px;
+      overflow: hidden;
+   }
+
+   .bloc-title .title-paragraphe{
+      display: inline-block;
+      width: 80%;
+      text-transform: uppercase;
+   }
+
+   .bloc-title .level-paragraphe{
+      display: inline-block;
+      width: 15%;
+      float: right;
+      text-align: center;
+   }
+
+
+
+   .bloc-content{
+      position: relative;
+      padding-top: 10px; 
+   }
+
+   .content-media{
+      display: inline-block;
+      width: 20%;
+      overflow: hidden;
+      position: relative;
+   }
+
+   .ctn-media{
+      overflow: auto;
+   }
+
+   .content-media img{
+      width: 100%;
+      display: block;
+   }
+
+   .media-desc{
+      padding: 5px;
+      margin-bottom: 10px;
+      line-height: 10px;
+      font-size: 10px;
+      text-align: center;
+      background-color: #86E2D5;
+   }
+
+
+   .content-text{
+      display: inline-block;
+      width: 75%;
+      padding: 5px;
+      vertical-align: top;
+   }
+
+   .content-text p{
+      font-size: 15px;
+      line-height: 25px;
+   }
+
+   .content-text a{
+      color: black;
+      text-decoration: none;
+   }
+
+   .content-text a:after{
+      content:' ☜';
+      font-size: 20px;
+
+   }
+
+   .bloc-score{
+      width: 45%;
+      float: left;
+      height: 100%;
+      line-height: 30px;
+   }
+
+   .bloc-score > span{
+      display: inline-block;
+      margin-right: 20px;
+   }
+
+   .score-good{
+      color: #2ECC71;
+   }
+
+   .score-bad{
+      color: #fd6260;
+   }
+
+   .expert-bloc-content{
+      border-right: #fd6260 solid 3px;
+   }
+
+   .debutant-bloc-content{
+      border-right: #2ECC71 solid 3px;
+   }
+
+   .intermediaire-bloc-content{
+      border-right: #EAD05B solid 3px;
+   }
+
+   .wiki-bloc-content{
+      border-right: black solid 3px;
+   }
+
+   .level-paragraphe-expert{
+      color: #fd6260;
+   }
+
+   .level-paragraphe-expert:after{
+      content:'Expert';
+   }
+
+   .level-paragraphe-debutant{
+      color: #2ECC71;
+   }
+
+   .level-paragraphe-debutant:after{
+      content:'Débutant';
+   }
+
+   .level-paragraphe-wiki{
+      color: black;
+   }
+
+   .level-paragraphe-wiki:after{
+      content:'Wikipédia';
+   }
+
+   .level-paragraphe-intermediaire{
+      color: #EAD05B;
+   }
+
+   .level-paragraphe-intermediaire:after{
+      content:'Intermédiaire';
+   }
+   
+   #navigation-panel{
+      display: block;
+   }
+
+   #navigation-panel > div{
+      height: 30px;
+      line-height: 30px;
+      text-align: right;
+      padding: 3px 25px 3px 3px;
+      display: inline-block;
+      border-radius: 0 0 5px 5px;
+      overflow: hidden;
+      position: relative;
+      background: #86E2D5;
+      color: grey;
+      cursor: pointer;
+      font-size: 15px;
+   }
+
+   #navigation-panel span
+   {
+      position: absolute;
+      right: 4px;
+      top: 10px;
+      height: 100%;
+      font-size: 15px;
+      border-radius: 50%;
+      display: inline;
+      line-height: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      color: grey;
+   }
+
+   .active-navigation{
+      background-color: transparent !important;
+      color: black !important;
+   }
+
+   nav{
+   	height: 70px;
+   	border-bottom: solid #86E2D5 10px;
+   	width: 100%;
+   	min-width: 960px;
+   }
+   nav #logo
+   {
+   	display: inline-block;
+   	height: 70px;
+   	width: 230px;
+   	background: url(../img/wekeypedia_logo.png) center 50% no-repeat;
+      background-size: auto 100%;
+   }
+
+   nav #search
+   {
+   	display: inline-block;
+   	height: 70px;
+   	width: 500px;
+   	vertical-align: top;
+   	text-align: center;
+   	vertical-align: top;
+   	line-height: 65px;
+   	overflow: hidden;
+   }
+
+   nav #search input[type="text"]{
+   	height: 25px;
+   	width: 200px;
+   	margin: 12px 0;
+   	outline: none;
+   	border: none;
+   	padding: 10px;
+   	border-radius: 5px;
+   	font-size: 18px;
+   	font-family: verdana;
+   	color: #3c3c3c;
+   	border: solid 1px #c3c3c3;
+   }
+
+   nav #search input[type="submit"]{
+   	height: 55px;
+   	width: 50px;
+   	margin: 7px 0;
+   	padding: 0;
+   	outline: none;
+   	border: none;
+   	vertical-align: bottom;
+   	border-radius: 5px;
+   	background: transparent url(../img/search_icon.png) center 50% no-repeat;
+   	background-size: auto 70%;
+   	cursor: pointer;
+   }
+
+   nav #profil{
+   	display: inline-block;
+   	width: 230px;
+   	height: 70px;
+   	line-height: 70px;
+   	vertical-align: top;
+   }
+
+   nav #profil a{
+   	text-decoration: none;
+   	display: block;
+   	width: 200px;
+   	height: 50px;
+   	margin: 5px 0px;
+   	padding: 5px 5px;
+   	line-height: 25px;
+   	overflow: hidden;
+   	color: #3c3c3c;
+   }
+
+   nav #profil a:hover{
+   	-moz-box-shadow: inset #B3B3B3 0 -1px 0 0;
+   	-webkit-box-shadow: inset #B3B3B3 -1px -1px 1px 0px;
+   	box-shadow: inset #B3B3B3 0 -1px -1px 0;
+   }
+
+   nav #profil span{
+   	display: block;
+   	width: 140px;
+   	height: 25px;
+   	text-align: right;
+   }
+
+   nav #profil div{
+   	border-radius: 5px;
+   	width: 40px;
+   	height: 40px;
+   	background: url(../img/avatar.jpg) center 50% no-repeat;
+   	background-size: auto 100%;
+   	float: right;
+   }
+
+   nav #profil .expert{
+   	border: 5px solid #fd6260;
+   }
+
+   nav #profil .debutant{
+   	border: 5px solid #2ECC71;
+   }
+
+   nav #profil .intermediaire{
+   	border: 5px solid #86E2D5;
+   }
+
+   nav #profil #rank_expert
+   {
+   	color: #fd6260;
+   }
+
+   nav #profil #rank_debutant
+   {
+   	color: #2ECC71;
+   }
+
+   nav #profil #rank_intermediaire
+   {
+   	color: #86E2D5;
+   }
+
+   .container{
+   	width: 960px;
+   	margin: auto;
+   }
+
+   #ctn-menu{
+   	padding-top: 20px;
+   	width: 250px;
+   	display: inline-block;
+   	vertical-align: top;
+   }
+
+   #ctn-big-avatar{
+   	height: 250px;
+   	background-color: #86E2D5;
+   	border-radius: 50% 50% 0 0;
+   	overflow: hidden;
+   }
+
+   #big-avatar{
+   	border-radius: 50%;
+   	width: 230px;
+   	height: 230px;
+   	margin: 10px auto;
+   	overflow: hidden;
+   	background: url(../img/avatar.jpg) center 50% no-repeat;
+   	background-size: auto 100%;
+   }
+
+   #ctn-links{
+   	background-color: #86E2D5;
+   	width: 100%;
+   	vertical-align: top;
+   	overflow: hidden;
+   }
+
+   #ctn-links li{
+   	height: 40px;
+   	line-height: 40px;
+   	text-align: center;
+   	width: 95%;
+   	margin: 5px auto;
+   	background-color: #FEFEFE;
+   	border-radius: 5px;
+   }
+
+   #ctn-links ul{
+   	display: block;
+   }
+
+   #ctn-content{
+   	display: inline-block;
+   	height: 1000px;
+   	width: 690px;
+   	padding: 20px 5px;
+   }
+
+   #ctn-username
+   {
+   	width: 450px;
+   	height: 100px;
+   	line-height: 25px;
+   	display: inline-block;
+   	overflow: hidden;
+   	color: #858585;
+   }
+
+   #ctn-username #username
+   {
+   	display: block;
+   	height: 60px;
+   	line-height: 60px;
+   	font-size: 50px;
+   	font-weight: bold;
+   }
+
+   #ctn-username #sex,
+   #ctn-username #age
+   {
+   	display: inline-block;
+   	height: 40px;
+   	line-height: 40px;
+   	font-size: 25px;
+   	overflow: hidden;
+   	color: #3c3c3c;
+   }
+
+   #ctn-username #sex:after{
+   	content: '-';
+   }
+
+   #ctn-rank{
+   	display: inline-block;
+   	border-radius: 5px;
+   	background-color: black;
+   	width: 220px;
+   	height: 75px;
+   	vertical-align: top;
+   	background: #2F2929 url(../img/medaille.png) left 50% no-repeat;
+
+   }
+
+
+#ctn-rank div{
+   float: right;
+   height: 100%;
+   width: 145px;
+   padding-right: 10px;
+}
+
+#ctn-rank div #rank-name{
+   display: block;
+   margin-top: 10px;
+   height: 25px;
+   line-height: 25px;
+   text-align: right;
+   text-transform: uppercase;
+}
+
+#ctn-rank div #rank-desc{
+   display: block;
+   height: 25px;
+   line-height: 12.5px;
+   font-size: 10px;
+   text-align: right;
+   color: #FEFEFE;
+}
+
+#ctn-content #header{
+   padding-bottom: 10px;
+   border-bottom: 5px solid grey;
+}
+
+
+.expert_color{
+   color:#fd6260;
+}
+
+.debutant_color{
+   color:#2ecc71;
+}
+
+.intermediaire_color{
+   color:#ead05b;
+}
+
+.panel-media{
+   width: 100%;
+   height: 50px;
+}
+
+.panel-media div{
+   width: 41px;
+   height: 50px;
+   margin: 0px 1px;
+   display: inline-block;
+   cursor: pointer;
+}
+
+.panel-audio{
+   background: url(../img/audio.png) center 50% no-repeat;
+   background-size: 80%;
+}
+
+.panel-lien{
+   background: url(../img/lien.png) center 50% no-repeat;
+   background-size: auto 40%;
+}
+
+.panel-video{
+   background: url(../img/video.png) center 50% no-repeat;
+   background-size: 50%;
+}
+
+.panel-image{
+   background: url(../img/image.png) center 50% no-repeat;
+   background-size: 50%;
+}
+
+.bloc-video,
+.bloc-audio,
+.bloc-link{
+   display: none;
+}
+
+audio{
+   width: 100%;
+}
+
+.bloc-link a{
+   display: block;
+   color: black;
+   text-decoration: none;
+}
+
+.bloc-link a:after{
+   content:' ☜';
+   font-size: 20px;
+
+}
+
